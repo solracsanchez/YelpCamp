@@ -37,6 +37,18 @@ body p{
 section{
     padding: 70px 20px;
 }
+
+.intouch{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 30px;
+    background-color: #FBE850;
+    font-family: 'Prata', serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #000;
+}
+
 #topo{
     display: flex;
     width: 100%;
@@ -53,7 +65,7 @@ section{
     display: none;
 }
 
-#itens > a{
+menu a{
     display: block;
     background-color: #222222;
     padding: 3px;
@@ -62,12 +74,16 @@ section{
     color: #fff;
 }
 
-button{
-    padding: 15px 30px;
-    background-color: #FBE850;
-    border: 0px;
-    font-family: 'Prata', serif;
-    font-size: 1.1rem;
+#itens .intouch{
+    margin-top: 0;
+    border: 0;
+    margin: auto;
+}
+
+
+
+#itens button{
+    margin: auto;
 }
 
 #logos{
