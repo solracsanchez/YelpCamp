@@ -75,6 +75,12 @@ menu a{
     border: 0.5px solid rgb(201, 201, 201);
     text-align: center;
     color: #fff;
+    transition: 0.2s;
+}
+
+#itens a:hover{
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 #itens .intouch{
