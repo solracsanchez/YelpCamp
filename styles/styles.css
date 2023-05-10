@@ -38,9 +38,12 @@ section{
     padding: 70px 20px;
 }
 
+header{
+    padding: 30px 20px;
+}
+
 .intouch{
     display: inline-block;
-    margin-top: 10px;
     padding: 15px 30px;
     background-color: #FBE850;
     font-family: 'Prata', serif;
@@ -53,7 +56,7 @@ section{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 30px 20px;
+    
     
 }
 
@@ -125,12 +128,10 @@ menu a{
 }
 
 #about p{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#about div + div{
-    margin-top: 60px;
-}
+
 
 footer{
     display: flex;

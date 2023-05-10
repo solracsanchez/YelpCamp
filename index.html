@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/medias.css">
 </head>
-<body>
+<body onresize="forceMenu()">
     <header>
         <div id="topo">
             <h3>Johnathan Specter</h3>
-            <i onclick="clickMenu()"><img src="Logos/Hamburger Menu.svg" alt="Menu"></i>
+            <i onclick="clickMenu()" id="burguer"><img src="Logos/Hamburger Menu.svg" alt="Menu"></i>
         </div>
-        <menu id="itens">
-            <a href="#">Article</a>
+        <menu id="itens" class="navItem">
+            <a href="#articles">Article</a>
             <a href="#">Chats</a>
             <a href="#">Awards</a>
-            <a href="#">About</a>
-            <a href="mailto:#@#.com" class="intouch">Get in touch</a>
+            <a href="#about">About</a>
         </menu>
+        <div id="intouch" class="navItem"><a href="mailto:#@#.com" class="intouch">Get in touch</a></div>
     </header>
     <main>
         <section id="init">
@@ -34,8 +34,6 @@
             <img src="Logos/Tinder.svg" alt="Logo Tinder">
             <img src="Logos/Samsung.svg" alt="Logo Samsung">
             <img src="Logos/Verizon.svg" alt="Logo Verizon">
-            
-
         </div>
         <section id="articles">
             <div>
@@ -57,8 +55,8 @@
             </div>
         </section>
         <section id="about">
-            <h2>A co-founder at one of the world's largest communities.</h2>
             <div>
+                <h2>A co-founder at one of the world's largest communities.</h2>
                 <p>The combined experience I have working at the top fortune 500 companies has allowed me to developer a skillset that helps me in not just development, but in every aspect of any business.</p>
                 <p>I'm proud to announce that I'm now working at one of the world's largeest communities teaching as developer and open to a whole new world of opportunities</p>
             </div>
@@ -86,13 +84,37 @@
         </div>
     </footer>
     <script>
+        function forceMenu(){
+            if (window.innerWidth <= 992){
+                itens.style.display = 'none'
+                intouch.style.display = 'none'
+            } else{
+                itens.style.display = 'block'
+                intouch.style.display = 'block'
+            }
+        }
         function clickMenu(){
             if (itens.style.display == 'block'){
                 itens.style.display = 'none'
+                intouch.style.display = 'none'
             } else{
                 itens.style.display = 'block'
+                intouch.style.display = 'block'
             }
         }
+
+        const navItem = document.querySelectorAll('.navItem')
+        navItem.forEach(item => {
+            item.addEventListener("click", () => {
+                if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+                intouch.style.display = 'none'
+            } else{
+                itens.style.display = 'block'
+                intouch.style.display = 'block'
+            }
+            })
+        })
     </script>
 </body>
 </html>
